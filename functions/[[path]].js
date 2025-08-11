@@ -680,7 +680,7 @@ async function handleApiRequest(request, env) {
 
             try {
                 const response = await fetch(new Request(externalUrl, {
-                    headers: { 'User-Agent': 'MiSub-Proxy/1.0' }, // Identify as proxy
+                    headers: { 'User-Agent': 'clash-verge/v1.6.6' }, // Identify as proxy
                     redirect: "follow",
                     cf: { insecureSkipVerify: true } // Allow insecure SSL for flexibility
                 }));
