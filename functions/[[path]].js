@@ -231,6 +231,8 @@ async function handleCronTrigger(env) {
 
     const nodeRegex = /^(ss|ssr|vmess|vless|trojan|hysteria2?|hy|hy2|tuic|anytls|socks5):\/\//gm;
 
+    let changesMade = false; // 用于跟踪是否有任何更改
+
     for (const sub of allSubs) {
         if (sub.url.startsWith('http') && sub.enabled) {
             try {
